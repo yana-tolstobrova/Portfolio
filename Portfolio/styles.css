@@ -1,15 +1,144 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
- *{
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;700&display=swap');
+body {
     font-family: 'Roboto', sans-serif;
- }
-
-
+    padding: 3% 10%;
+}
+:root{
+    --accent: #9dff20;
+}
 img.main-photo{
-    width: 50%;
+    width: 45%;
+    height: 45%;
  }
 .projects {
-    width: 80%;
+    width: 90%;
+    margin: 5%;
+}
+.projects:hover{
+    box-shadow: 0.5em 0.5em 1em rgb(179, 175, 175);
+    transition: 0.3s;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+span.logo, h2{
+    font-family: 'Roboto Slab', serif;
+}
+.logo {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+nav a{
+    margin-left: 1em;
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    text-shadow: 0 0 1em var(--accent);
+}
+.hero{
+    display: flex;
+    padding: 10% 5%;
+    justify-content: space-between;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
+.text-hero{
+    width: 50%;
+}
+.text-hero p{
+    font-size: 1.2em;
+}
+.heading{
+    display: flex;
+    align-items: flex-start;
+    margin: 5em 0 3em 0;
+}
+.heading span:last-child{
+    align-self: flex-end;
+}
+
+h1{
+    font-size: 3.5em;
+    margin: 0 0.3em;
+}
+.call-action{
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 0.25em;
+    margin-top: 2.5em;
+}
+.call-action:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.35s;
+}
+h2 {
+    text-shadow: 0 0 1em var(--accent);
+    font-size: 2em;
+    padding-left: 5%;
+}
+.footer-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 15%;
+}
+form{
+    width: 60%;
+    margin-top: 7%;
+}
+label{
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    margin: 5% 0 2% 0;
+}
+.input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    border-radius: 0.2em;
+    border: 0.1em solid grey;
+}
+.input:hover, .input:active, .input:focus {
+    border: 0.1em solid black;
+    box-shadow: 0.1em 0.1em 0.1em grey;
+    outline: none;
+}
+.contacts{
+    text-align: center;
+    width: 25%;
+}
+.contacts h2{
+    margin-bottom: 30%;
+}
+.contacts a{
+    margin-left: 7%;
+}
+.contacts img{
+    width: 35px;
+}
+.contacts img:hover{
+    transform: translate(3px, 3px);
+}
+@media screen and (max-width: 767px){
+    body{
+        width: 100%;
+    }
+    .hero {
+        flex-direction: column-reverse;
+    }
+    .footer-box{
+        flex-direction: column;
+    }
+    .links{
+        display: flex;
+    }
+}
+
